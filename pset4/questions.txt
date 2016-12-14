@@ -1,0 +1,19 @@
+0.  BMP: 16M; GIF: 256; JPEG: 16M; PNG: 156; 
+1.  GIF
+2.  Lossless compression will not lose any of the original bits in the file after the file is decompressed. Lossy compression will lose some of the bits during compression.
+3.  JPEG
+4.  The first letter of the file's FAT directory is changed to signify that it is deleted and it is then classified as free space to be overwritten.
+5.  Either destroy the hard drive or completely overwrite the data that is not null.
+6.  It's a C library that includes uint8_t; uint32_t; int32_t; uint16_t;
+7.  To make the program compatible with any bmp type such as 1 byte, 4byte or 16 bytes. And to make the file easier to work with.
+8.  1 byte; 4 bytes; 4 bytes; 2 bytes. 
+9.  4d42.
+10. bfSize is the size, in Bytes of the bitmap file. biSize is the number of bytes required by the actual bitmap.
+11. It means the bitmap is a top-down DIB and its origin is the upper left corner.
+12. biBitCount.
+13. because we either are using memory that is restricted or we reached the end of the file.
+14. because we are reading through one file.
+15. 1.
+16. It tells the program to skip the padding by changing the location of the pointer.
+17. it changes the location of the pointer from its current location.
+18. rick astley?

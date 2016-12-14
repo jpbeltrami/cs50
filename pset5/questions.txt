@@ -1,0 +1,27 @@
+0.  It's a sort of lung disease.
+1.  getrusage calculates the resource usage by a process. It then stores usage measures in the rusage struct it points at.
+2.  The rusage structs contains 16 members.
+3.  Because the getrusage time passes a pointer and not a value.
+4.  The text is opened and passed in to the for loop's fgetc function. That function will take one letter at a time until it reaches 
+the EOF.
+The letter from text(fp) is stored in variable c. At this point c goes faces thre if conditions. The first is true if c is a letter 
+by the use of isalpha(), or it is true if c is either ''\' (indicating a null 0 or even an newline) and index is greater than 0.
+If the first if is passed then c is stored in the 'word' array by the value of index (which is initialized to 0) and index is increade by one.
+If at this point index is greaster than 45(LENGTH) then the word can't be in the dictionary because it is too long; the rest of the string 
+is consumed and index is returned to 0. The loop starts at the beginning and c is fed a new character.
+The second if statement is true when c contains a number; the rest of the string will be skipped until it reaches another letter,
+then index is again set to 0.
+the thrid if statement is true when index is > 0. if this is the case we know it is the end of a word because c (assuming it's a space)
+will not have passed the first two if statements but will have passed the last one.
+A '\0\ is stored in the current index indicating the end of a word. the word count 'words' is increased by 1.
+The time to run check() is measured by sandwiching it between two getusage statements and is added to the total time to spell check text (time_check).
+if the word is misspelled then the variable misspelled = 'true' and 'misspellings' is increased by 1. At this point we reset index to 0 and 
+loop back at the very top to check another word.
+5.  fgetc is more effective because it takes it one character at a time including whitespaces. fscanf ignores space.
+6.  Because we don't want the values pointed to by the pointer to change. This makes usre the check and load functions don't change
+those values.
+7. I used tries. They include a boolean value 'is_word' which indicates wethere we have reached the end of a word; they then include the array of 
+pointers representing the letters of the alphabet.
+8. My program takes 0.17 seconds to spellcheck alice.txt.
+9. I didn't make changes yet I'm just glad I was able to get it working properly :D
+10. It looks like load and unload are the biggest bottlenecks in my program. I think using fewer variables and fewer steps would make it faster. 

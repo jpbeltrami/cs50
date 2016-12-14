@@ -1,0 +1,9 @@
+questions.txt
+
+Computer Science 50
+Problem Set 3
+
+0. The game allows dimentions from 3 x 3 up to 9 x 9.
+1. An Array(s)
+2. greet()
+3. init, draw, move, won
